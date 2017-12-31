@@ -7,7 +7,7 @@
 <script lang='ts'>
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import Counter from './Counter'
+import Counter from '@/components/Counter.vue'
 
 @Component({
   name: 'helloWorld',
