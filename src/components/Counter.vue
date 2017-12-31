@@ -6,21 +6,23 @@
   </div>
 </template>
 
-<script>
+<script lang='ts'>
+import Vue from 'vue'
+import Component from 'vue-class-component'
 import { mapActions } from 'vuex'
 
-export default {
-  name: 'Counter',
-  computed: {
-    count () {
-      return this.$store.getters.getCount
-    }
-  },
+@Component({
+  name: 'counter',
   methods: {
     ...mapActions({
       increment: 'increment',
       decrement: 'decrement'
     })
+  }
+})
+export default class Counter extends Vue {
+  get count (): number {
+    return this.$store.getters.getCount
   }
 }
 </script>

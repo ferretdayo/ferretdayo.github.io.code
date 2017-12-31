@@ -4,14 +4,16 @@
   </div>
 </template>
 
-<script>
+<script lang='ts'>
+import Vue from 'vue'
+import Component from 'vue-class-component'
 import Counter from './Counter'
 
-export default {
-  name: 'HelloWorld',
-  components: {
-    Counter
-  }
+@Component({
+  name: 'helloWorld',
+  components: { Counter }
+})
+export default class HelloWorld extends Vue {
 }
 </script>
 
