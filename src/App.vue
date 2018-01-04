@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <v-app>
-      <Header></Header>
+    <v-app v-resize="onResize">
       <v-content>
-        <router-view/>
+        <Header></Header>
+        <v-container>
+          <router-view/>
+        </v-container>
+        <Footer></Footer>
       </v-content>
-      <Footer></Footer>
     </v-app>
   </div>
 </template>
@@ -24,9 +26,12 @@ import Header from '@/components/Header.vue'
 export default class App extends Vue {
   constructor () {
     super()
-    // mapActionsで関数定義しても上手く動かないので，ひとまず直接dispatch
+    this.onResize()
+  }
+
+  // mapActionsで関数定義しても上手く動かないので，ひとまず直接dispatch
+  onResize () {
     this.$store.dispatch('resizeWindowWidth')
-    window.addEventListener('resize', () => { setTimeout(this.$store.dispatch('resizeWindowWidth'), 300) })
   }
 }
 </script>
@@ -35,11 +40,12 @@ export default class App extends Vue {
 @import '../node_modules/vuetify/src/stylus/main.styl'
 
 #app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  text-align center
+  color #2c3e50
 body
-  margin: 0px;
+  margin 0px
+  cursor url('./assets/mizu_cursor.png'), auto
 </style>

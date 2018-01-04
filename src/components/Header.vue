@@ -1,6 +1,6 @@
 <template>
   <header id="header">
-    <v-navigation-drawer light fixed permanent touchless :mini-variant="isMobile">
+    <v-navigation-drawer app fixed permanent touchless :mini-variant="isMobile">
       <v-toolbar flat class="transparent">
         <v-list class="pa-0">
           <v-list-tile avatar :to="''">
