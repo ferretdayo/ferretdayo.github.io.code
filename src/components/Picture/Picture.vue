@@ -1,10 +1,6 @@
 <template>
-  <div id="hobby">
-    <v-layout row wrap>
-      <v-flex>
-        <h1>Hobby</h1>
-      </v-flex>
-    </v-layout>
+  <div id="picture">
+    Picture!
   </div>
 </template>
 
@@ -13,9 +9,9 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component({
-  name: 'Hobby'
+  name: 'Picture'
 })
-export default class Hobby extends Vue {
+export default class Picture extends Vue {
 }
 </script>
 
