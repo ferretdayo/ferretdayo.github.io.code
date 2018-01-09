@@ -16,12 +16,13 @@
       <v-flex xs12 sm12 md6>
         <h3 class="title">情報</h3>
         <v-list class="content">
-          <v-list-tile v-for="infomation in infomations" v-bind:key="infomation.content">
+          <v-list-tile v-for="information in informations" :key="information.content">
             <v-list-tile-action>
-              <v-icon>{{infomation.icon}}</v-icon>
+              <v-icon>{{information.icon}}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>{{ infomation.content }}</v-list-tile-title>
+              <v-list-tile-title v-if="information.link"><a target="_blank" :href="information.link">{{ information.content }}</a></v-list-tile-title>
+              <v-list-tile-title v-else>{{ information.content }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
@@ -78,7 +79,7 @@ export default class Tsuruemon extends Vue {
     }
   ]
 
-  infomations = [
+  informations = [
     {
       icon: 'place',
       content: '茨城県'
@@ -90,6 +91,21 @@ export default class Tsuruemon extends Vue {
     {
       icon: 'email',
       content: 'ferretdayo[at]gmail.com'
+    },
+    {
+      icon: 'public',
+      content: 'Twitter',
+      link: 'https://twitter.com/terado_desu'
+    },
+    {
+      icon: 'public',
+      content: 'Qiita',
+      link: 'https://qiita.com/ferretdayo'
+    },
+    {
+      icon: 'public',
+      content: 'hatena blog',
+      link: 'http://ferretdayo.hatenablog.com/'
     }
   ]
 }
@@ -106,7 +122,8 @@ export default class Tsuruemon extends Vue {
     margin-top 20px
   .content
     background-color inherit
-
+  .layout-content
+    margin-top 10px
 // ipad用
 @media screen and (min-width: 700px) and (max-width: 960px)
   .layout-content

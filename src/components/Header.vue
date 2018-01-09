@@ -47,28 +47,23 @@ export default class Header extends Vue {
     },
     {
       title: 'SKILL',
-      icon: 'dashboard',
+      icon: 'computer',
       path: '/skill'
     },
     {
       title: 'PRODUCT',
-      icon: 'dashboard',
+      icon: 'devices_other',
       path: '/product'
     },
     {
       title: 'HOBBY',
-      icon: 'dashboard',
+      icon: 'directions_run',
       path: '/hobby'
     },
     {
       title: 'PICTURE',
       icon: 'photo_camera',
       path: '/picture'
-    },
-    {
-      title: 'SOCIAL',
-      icon: 'assignment_ind',
-      path: '/social'
     }
   ]
 }
