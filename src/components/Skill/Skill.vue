@@ -12,7 +12,7 @@
         <v-flex v-for="language in languages" :key="language.content">
           <div class="skill">
             <h2 class="skill-lv">Lv. {{language.lv}}</h2>
-            <img class="skill-icon" :src="language.icon">
+            <img class="skill-icon" :src="require(`../../assets/${language.icon}.jpg`)">
             <div class="skill-content">{{language.name}}</div>
           </div>
         </v-flex>
@@ -25,7 +25,7 @@
         <v-flex v-for="framework in frameworks" :key="framework.content">
           <div class="skill">
             <h2 class="skill-lv">Lv. {{framework.lv}}</h2>
-            <img class="skill-icon" :src="framework.icon">
+            <img class="skill-icon" :src="require(`../../assets/${framework.icon}.jpg`)">
             <div class="skill-content">{{framework.name}}</div>
           </div>
         </v-flex>
@@ -45,54 +45,54 @@ export default class Skill extends Vue {
   languages = [
     {
       lv: 20,
-      icon: '../../assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'JavaScript'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'PHP'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'Java'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'Swift'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'HTML'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'CSS'
     }
   ]
   frameworks = [
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'Vue.js'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'AngularJS v4'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'Laravel'
     },
     {
       lv: 20,
-      icon: 'src/assets/tsuruemon.jpg',
+      icon: 'tsuruemon',
       name: 'Spring Boot'
     }
   ]

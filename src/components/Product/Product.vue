@@ -1,6 +1,10 @@
 <template>
   <div id="product">
-    Product!
+    <v-layout row wrap>
+      <v-flex>
+        <h1>Product!</h1>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
