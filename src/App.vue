@@ -8,6 +8,10 @@
         </v-container>
         <Footer></Footer>
       </v-content>
+      <div @click="setTop">
+        <div class="up-cursor">↑</div>
+        <img class="up" src="./assets/mizu_cursor_hover.png">
+      </div>
     </v-app>
   </div>
 </template>
@@ -33,6 +37,10 @@ export default class App extends Vue {
   onResize () {
     this.$store.dispatch('resizeWindowWidth')
   }
+
+  setTop () {
+    window.scroll(0, 0)
+  }
 }
 </script>
 
@@ -48,4 +56,34 @@ export default class App extends Vue {
 body
   margin 0px
   cursor url('./assets/mizu_cursor.png'), auto
+.up
+  display fixed
+  position absolute
+  right 50px
+  bottom 50px
+  width 50px
+  height 50px
+.up-cursor
+  display fixed
+  position absolute
+  right 90px
+  bottom 30px
+  width 50px
+  height 50px
+
+@media screen and (max-width: 960px)
+  .up
+    display fixed
+    position absolute
+    right 20px
+    bottom 20px
+    width 35px
+    height 35px
+  .up-cursor
+    display fixed
+    position absolute
+    right 50px
+    bottom 20px
+    width 35px
+    height 35px
 </style>
