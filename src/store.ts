@@ -6,12 +6,14 @@ Vue.use(Vuex)
 type State = {
   count: number
   windowWidth: number
+  windowHeight: number
   isMobile: boolean
 }
 
 type Getters = {
   getCount (state: State): number
   getWindowWidth (state: State): number
+  getWindowHeight (state: State): number
   getIsMobile (state: State): boolean
 }
 
@@ -19,12 +21,14 @@ type Actions = {
   increment (context: any): void,
   decrement ({ commit }: any): void,
   resizeWindowWidth (context: any): void
+  resizeWindowHeight (context: any): void
 }
 
 type Mutations = {
   plus (state: State): void,
   sub (state: State): void,
   windowWidth (state: State, _windowWidth: number): void
+  windowHeight (state: State, _windowWidth: number): void
   isMobile (state: State): void
 }
 
@@ -35,6 +39,7 @@ type Mutations = {
 const state: State = {
   count: 0,
   windowWidth: 0,
+  windowHeight: 0,
   isMobile: false
 }
 /**
@@ -50,6 +55,10 @@ const actions: Actions = {
   resizeWindowWidth (context: any) {
     context.commit('windowWidth', document.documentElement.clientWidth)
     context.commit('isMobile')
+  },
+  resizeWindowHeight (context: any) {
+    context.commit('windowHeight', document.documentElement.clientHeight)
+    context.commit('isMobile')
   }
 }
 /**
@@ -61,6 +70,9 @@ const getters: Getters = {
   },
   getWindowWidth (state: any): number {
     return state.windowWidth
+  },
+  getWindowHeight (state: any): number {
+    return state.windowHeight
   },
   getIsMobile (state: any): boolean {
     return state.isMobile
@@ -78,6 +90,9 @@ const mutations: Mutations = {
   },
   windowWidth (state: any, _windowWidth: number) {
     state.windowWidth = _windowWidth
+  },
+  windowHeight (state: any, _windowHeight: number) {
+    state.windowHeight = _windowHeight
   },
   isMobile (state: any) {
     if (state.windowWidth < 1264) {
