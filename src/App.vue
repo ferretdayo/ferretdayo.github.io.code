@@ -36,6 +36,7 @@ export default class App extends Vue {
   // mapActionsで関数定義しても上手く動かないので，ひとまず直接dispatch
   onResize () {
     this.$store.dispatch('resizeWindowWidth')
+    this.$store.dispatch('resizeWindowHeight')
   }
 
   setTop () {
