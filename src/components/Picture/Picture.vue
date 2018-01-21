@@ -40,7 +40,7 @@
           </v-card>
         </v-dialog>
         <!-- 横画像の場合 -->
-        <v-dialog v-else v-model="dialog" :width="`${(getWindowHeight/100)*80*3.0/2.0}px`">
+        <v-dialog v-else v-model="dialog" :width="`${((getWindowHeight/100)*80*3.0/2.0)-0.5}px`">
           <v-card v-if="modalPicture.name">
             <v-card-media class="card-media" :src="require(`../../assets/lg${modalPicture.name}`)" :alt="modalPicture.caption" contain :height="`${getWindowHeight/100*80}px`"></v-card-media>
             <v-card-title>
@@ -70,9 +70,47 @@ export default class Picture extends Vue {
   modalHeight: number = 100
   albums = [
     {
+      name: '和歌山',
+      startDate: '2016/09/01',
+      endDate: '2016/09/02',
+      pictures: [
+        { name: '__waka1.jpg', caption: '白浜海岸のカニ' },
+        { name: '__waka2.jpg', caption: '円月島' },
+        { name: '__waka3.jpg', caption: 'アドベンチャーワールドの🐶' }
+      ]
+    },
+    {
+      name: '江ノ島',
+      startDate: '2017/05/05',
+      endDate: '2017/05/05',
+      pictures: [
+        { name: '_eno1.jpg', caption: 'ミズゴロウと岩' },
+        { name: '_eno2.jpg', caption: '波に飲まれた後のミズゴロウ' },
+        { name: '__eno1.jpg', caption: 'しらす丼' }
+      ]
+    },
+    {
+      name: '京都御苑',
+      startDate: '2017/08/08',
+      endDate: '2017/08/08',
+      pictures: [
+        { name: '_goen1.jpg', caption: 'ミズゴロウと🌸' }
+      ]
+    },
+    {
+      name: '城崎温泉',
+      startDate: '2017/08/25',
+      endDate: '2017/08/25',
+      pictures: [
+        { name: '_kino1.jpg', caption: 'ミズゴロウに立ちはだかるパンダ' },
+        { name: '__kino1.jpg', caption: '温泉' },
+        { name: '__kino2.jpg', caption: 'そばです😊' }
+      ]
+    },
+    {
       name: 'イタリア',
-      startDate: '2017/10/08',
-      endDate: '2017/10/16',
+      startDate: '2017/10/04',
+      endDate: '2017/10/11',
       pictures: [
         { name: '__italy1.jpg', caption: 'ミケランジェロ広場からの夜景' },
         { name: '__italy2.jpg', caption: 'ヴェネツィアの船version1' },
@@ -86,14 +124,6 @@ export default class Picture extends Vue {
         { name: '_italy7.jpg', caption: 'ミケランジェロ広場のミズゴロウ' },
         { name: '_italy8.jpg', caption: 'ピサの斜塔のミズゴロウ', verticle: true },
         { name: '_italy9.jpg', caption: 'ヴェネツィアのミズゴロウ' }
-      ]
-    },
-    {
-      name: '京都御苑',
-      startDate: '2017/08/08',
-      endDate: '2017/08/08',
-      pictures: [
-        { name: '_goen1.jpg', caption: 'ミズゴロウと🌸' }
       ]
     }
   ]
