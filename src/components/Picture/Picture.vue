@@ -29,7 +29,7 @@
         </div>
         <!-- 本当はcomputedにしたかった．．． -->
         <!-- 縦画像の場合 -->
-        <v-dialog v-if="modalPicture.verticle" v-model="dialog" :width="`${getWindowHeight/100*80*2.0/3.0}px`">
+        <v-dialog v-if="modalPicture.verticle" v-model="dialog" :width="`${(getWindowHeight/100)*80*2.0/3.0}px`">
           <v-card v-if="modalPicture.name">
             <v-card-media class="card-media" :src="require(`../../assets/lg${modalPicture.name}`)" :alt="modalPicture.caption" contain :height="`${getWindowHeight/100*80}px`"></v-card-media>
             <v-card-title>
@@ -40,7 +40,7 @@
           </v-card>
         </v-dialog>
         <!-- 横画像の場合 -->
-        <v-dialog v-else v-model="dialog" :width="`${getWindowHeight/100*80*3.0/2.0}px`">
+        <v-dialog v-else v-model="dialog" :width="`${(getWindowHeight/100)*80*3.0/2.0}px`">
           <v-card v-if="modalPicture.name">
             <v-card-media class="card-media" :src="require(`../../assets/lg${modalPicture.name}`)" :alt="modalPicture.caption" contain :height="`${getWindowHeight/100*80}px`"></v-card-media>
             <v-card-title>
