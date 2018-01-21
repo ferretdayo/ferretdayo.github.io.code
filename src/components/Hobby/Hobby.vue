@@ -27,7 +27,7 @@
           最近やってないので100超えるかどうか...<br>
         </aside>
         <figure class="hobby-item-image">
-          <img src="">
+          <img class="hobby-image" src="../../assets/darts.png">
           <figcaption>ダーツ</figcaption>
         </figure>
         <aside class="hobby-item-text">
