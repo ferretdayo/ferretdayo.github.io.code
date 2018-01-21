@@ -67,7 +67,6 @@ import { mapGetters } from 'vuex'
 export default class Picture extends Vue {
   dialog: boolean = false
   modalPicture: any = {}
-  modalHeight: number = 100
   albums = [
     {
       name: '和歌山',
