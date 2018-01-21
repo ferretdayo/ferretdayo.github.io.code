@@ -70,7 +70,7 @@ export default class Hobby extends Vue {
 
 .hobby-item-text {
   text-align: left;
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .hobby-item-image:nth-of-type(1) {
@@ -114,7 +114,7 @@ export default class Hobby extends Vue {
 
   .hobby-item-text {
     text-align: left;
-    padding-left: 0px;
+    padding: 10px;
   }
 
   .hobby-image {
