@@ -51,6 +51,10 @@ export default class Hobby extends Vue {
 </script>
 
 <style scoped>
+figcaption {
+  font-size: 18px;
+}
+
 .hobby-grid {
   width: 100%;
   margin-top: 50px;
