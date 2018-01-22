@@ -8,8 +8,8 @@
     <v-layout row wrap justify-center>
       <article class="hobby-grid">
         <figure class="hobby-item-image">
-          <img class="hobby-image" src="../../assets/badminton.png">
           <figcaption>バドミントン</figcaption>
+          <img class="hobby-image" src="../../assets/badminton.png">
         </figure>
         <aside class="hobby-item-text">
           バドミントンは約11年間ほどやっていました．<br>
@@ -18,8 +18,8 @@
           社会人になったらゆるふわにバドミントンしたいので誰か誘ってください＞＜
         </aside>
         <figure class="hobby-item-image">
-          <img class="hobby-image" src="../../assets/bowling.png">
           <figcaption>ボウリング</figcaption>
+          <img class="hobby-image" src="../../assets/bowling.png">
         </figure>
         <aside class="hobby-item-text">
           大学生の時に先輩とめっちゃ10ゲーム投げたりしてました．<br>
@@ -27,8 +27,8 @@
           最近やってないので100超えるかどうか...<br>
         </aside>
         <figure class="hobby-item-image">
-          <img class="hobby-image" src="../../assets/darts.png">
           <figcaption>ダーツ</figcaption>
+          <img class="hobby-image" src="../../assets/darts.png">
         </figure>
         <aside class="hobby-item-text">
           大学院1年くらいからはじめました〜<br>
@@ -53,6 +53,7 @@ export default class Hobby extends Vue {
 <style scoped>
 figcaption {
   font-size: 18px;
+  font-weight: bold;
 }
 
 .hobby-grid {
@@ -65,7 +66,7 @@ figcaption {
 
 .hobby-image {
   width: 350px;
-  padding: 20px;
+  padding: 10px 20px 20px;
 }
 
 .hobby-item-image, .hobby-item-text {
