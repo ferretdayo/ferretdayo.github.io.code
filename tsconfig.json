@@ -32,23 +32,22 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "module": "es6",
+    "module": "es2015",
     "moduleResolution": "node",
     "newLine": "LF",
     "skipLibCheck": true,
     "noImplicitAny": false,
-    "noImplicitThis": false,
+    "noImplicitThis": true,
     "strictNullChecks": true,
     "sourceMap": true,
-    "target": "es5",
+    "target": "es2015",
     "lib": ["dom", "es2015"],
     "jsx": "preserve",
     "outDir": "lib",
     "isolatedModules": false,
     "declaration": true,
     "removeComments": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "types": ["vue-typescript-import-dts"]
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": ["src/**/*", "__tests__/**/*"]
 }
