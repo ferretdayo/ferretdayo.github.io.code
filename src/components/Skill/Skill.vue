@@ -105,7 +105,7 @@ export default class Skill extends Vue {
   text-align center
   border-bottom 3px solid darkgray
   font-size 26px
-  margin 20px 0
+  margin 50px 0 20px
 .note
   text-align center
   border-bottom 3px solid darkgray

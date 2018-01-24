@@ -141,7 +141,7 @@ export default class Picture extends Vue {
   object-fit: cover;
 }
 .subheader {
-  margin: 20px auto 0px;
+  margin: 50px auto 0px;
 }
 .picture-caption {
   margin-bottom: 10px;
