@@ -1,3 +1,30 @@
+// {
+//   "compilerOptions": {
+//     "allowSyntheticDefaultImports": true,
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "importHelpers": true,
+//     "newLine": "LF",
+//     "module": "es2015",
+//     "moduleResolution": "node",
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "noImplicitAny": false,
+//     "noImplicitThis": true,
+//     "strictNullChecks": true,
+//     "sourceMap": true,
+//     "target": "es5",
+//     "lib": ["dom", "es2015"],
+//     "jsx": "preserve",
+//     "outDir": "lib",
+//     "isolatedModules": false,
+//     "declaration": true,
+//     "removeComments": true,
+//     "suppressImplicitAnyIndexErrors": true,
+//   },
+//   "include": ["src/**/*", "__tests__/**/*"]
+// }
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
@@ -5,13 +32,12 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "newLine": "LF",
-    "module": "es2015",
+    "module": "es6",
     "moduleResolution": "node",
+    "newLine": "LF",
     "skipLibCheck": true,
-    "strict": true,
     "noImplicitAny": false,
-    "noImplicitThis": true,
+    "noImplicitThis": false,
     "strictNullChecks": true,
     "sourceMap": true,
     "target": "es5",
@@ -22,6 +48,7 @@
     "declaration": true,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
+    "types": ["vue-typescript-import-dts"]
   },
   "include": ["src/**/*", "__tests__/**/*"]
 }
