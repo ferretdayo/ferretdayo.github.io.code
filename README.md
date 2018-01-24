@@ -1,4 +1,8 @@
-# counter
+# ferretdayo.github.io
+
+[![Coverage Status](https://coveralls.io/repos/github/ferretdayo/ferretdayo.github.io.code/badge.svg?branch=master)](https://coveralls.io/github/ferretdayo/ferretdayo.github.io.code?branch=master)
+
+[![Build Status](https://travis-ci.org/ferretdayo/ferretdayo.github.io.code.svg?branch=master)](https://travis-ci.org/ferretdayo/ferretdayo.github.io.code)
 
 > A Vue.js project
 
