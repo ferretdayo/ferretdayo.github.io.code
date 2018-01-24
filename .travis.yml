@@ -6,7 +6,7 @@ cache:
 script:
   - npm run unit
 before_script:
-  - npm install --save-dev coveralls
+  - npm install -g coveralls
 after_script:
   - "jest --config test/unit/jest.conf.js --coverage && cat ./coverage/lcov.info | coveralls"
 env:
