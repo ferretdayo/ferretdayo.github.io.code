@@ -53,60 +53,21 @@ import Component from 'vue-class-component'
 })
 export default class Tsuruemon extends Vue {
   careers = [
-    {
-      icon: 'school',
-      content: '京都+広島の小学校'
-    },
-    {
-      icon: 'school',
-      content: '広島+京都の中学校'
-    },
-    {
-      icon: 'school',
-      content: '京都の高等学校'
-    },
-    {
-      icon: 'school',
-      content: '広島市立大学（3年間）'
-    },
-    {
-      icon: 'school',
-      content: '国立筑波大学大学院'
-    },
-    {
-      icon: 'work',
-      content: '株式会社????????'
-    }
+    { icon: 'school', content: '京都+広島の小学校' },
+    { icon: 'school', content: '広島+京都の中学校' },
+    { icon: 'school', content: '京都の高等学校' },
+    { icon: 'school', content: '広島市立大学(3年間)' },
+    { icon: 'school', content: '国立筑波大学大学院' },
+    { icon: 'work', content: '株式会社????????' }
   ]
 
   informations = [
-    {
-      icon: 'place',
-      content: '茨城県'
-    },
-    {
-      icon: 'cake',
-      content: '1994/07/07'
-    },
-    {
-      icon: 'email',
-      content: 'ferretdayo[at]gmail.com'
-    },
-    {
-      icon: 'public',
-      content: 'Twitter',
-      link: 'https://twitter.com/terado_desu'
-    },
-    {
-      icon: 'public',
-      content: 'Qiita',
-      link: 'https://qiita.com/ferretdayo'
-    },
-    {
-      icon: 'public',
-      content: 'hatena blog',
-      link: 'http://ferretdayo.hatenablog.com/'
-    }
+    { icon: 'place', content: '茨城県' },
+    { icon: 'cake', content: '1994/07/07' },
+    { icon: 'email', content: 'ferretdayo[at]gmail.com' },
+    { icon: 'public', content: 'Twitter', link: 'https://twitter.com/terado_desu' },
+    { icon: 'public', content: 'Qiita', link: 'https://qiita.com/ferretdayo' },
+    { icon: 'public', content: 'hatena blog', link: 'http://ferretdayo.hatenablog.com/' }
   ]
 }
 </script>
