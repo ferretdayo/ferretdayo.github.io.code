@@ -6,7 +6,7 @@
       </v-flex>
     </v-layout>
     <!-- プログラミング言語の紹介 -->
-    <section>
+    <section id="language">
       <h2 class="section">language</h2>
       <v-layout row wrap>
         <v-flex v-for="language in languages" :key="language.content">
@@ -19,7 +19,7 @@
       </v-layout>
     </section>
     <!-- フレームワークの紹介 -->
-    <section>
+    <section id="framework">
       <h2 class="section">framework</h2>
       <v-layout row wrap>
         <v-flex v-for="framework in frameworks" :key="framework.content">
@@ -32,7 +32,7 @@
       </v-layout>
     </section>
     <!-- その他の技術の紹介 -->
-    <section>
+    <section id="other">
       <h2 class="section">other</h2>
       <v-layout row wrap>
         <v-flex v-for="other in others" :key="other.content">
