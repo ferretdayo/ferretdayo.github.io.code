@@ -33,17 +33,17 @@ describe('Skill.vue', () => {
     expect(vm.$el.querySelector('h3.note').textContent).toEqual('備考')
   })
 
-  it('test', (done) => {
-    function callback(data) {
-      expect(data).toBe('aaa')
-      done()
-    }
+  // it('test', (done) => {
+  //   function callback(data) {
+  //     expect(data).toBe('aaa')
+  //     done()
+  //   }
 
-    function fetchData(callback) {
-      setTimeout(() => {
-        callback('bbb')
-      }, 1000)
-    }
-    fetchData(callback)
-  })
+  //   function fetchData(callback) {
+  //     setTimeout(() => {
+  //       callback('bbb')
+  //     }, 1000)
+  //   }
+  //   fetchData(callback)
+  // })
 })
