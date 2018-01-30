@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Vuetify from 'vuetify'
+import { mount } from 'vue-test-utils'
 import Picture from '@/components/Picture/Picture'
 
 Vue.use(Vuetify)
+Vue.use(Vuex)
 
 describe('Picture.vue', () => {
   it('should render correct contents', () => {
+    const wrapper = mount(Picture)
+    expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
     // const Constructor = Vue.extend(Picture)
     // const vm = new Constructor().$mount()
     // console.log(vm.$data)

@@ -32,7 +32,6 @@ type Mutations = {
   isMobile (state: State): void
 }
 
-
 // /**
 //  * 状態を保持したい変数の管理
 //  */
@@ -100,7 +99,6 @@ const mutations: Mutations = {
     } else {
       state.isMobile = false
     }
-    console.log(state.isMobile)
   }
 }
 
