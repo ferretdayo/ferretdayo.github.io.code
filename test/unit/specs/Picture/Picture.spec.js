@@ -1,13 +1,30 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Vuetify from 'vuetify'
-import { mount } from 'vue-test-utils'
+import { mount, shallow, createLocalVue } from 'vue-test-utils'
 import Picture from '@/components/Picture/Picture'
 
-Vue.use(Vuetify)
-Vue.use(Vuex)
+const localVue = createLocalVue()
+
+localVue.use(Vuetify)
+localVue.use(Vuex)
+
 
 describe('Picture.vue', () => {
+  let actions
+  let store
+
+  beforeEach(() => {
+    actions = {
+      actionClick: jest.fn(),
+      actionInput: jest.fn()
+    }
+    store = new Vuex.Store({
+      state: {},
+      actions
+    })
+  })
+  
   it('should render correct contents', () => {
     const wrapper = mount(Picture)
     expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')

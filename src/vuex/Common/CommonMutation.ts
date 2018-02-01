@@ -4,12 +4,6 @@ import { MutationTree } from "vuex"
  * mutationsは値の移り変わりの処理を実装
  */
 const mutations: MutationTree<CommonState> = {
-  plus (state: any) {
-    state.count += 1
-  },
-  sub (state: any) {
-    state.count -= 1
-  },
   windowWidth (state: any, _windowWidth: number) {
     state.windowWidth = _windowWidth
   },

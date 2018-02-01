@@ -29,27 +29,29 @@
         </div>
         <!-- 本当はcomputedにしたかった．．． -->
         <!-- 縦画像の場合 -->
-        <v-dialog v-if="modalPicture.verticle" v-model="dialog" :width="`${(getWindowHeight/100)*80*2.0/3.0}px`">
-          <v-card v-if="modalPicture.name">
-            <v-card-media class="card-media" :src="require(`../../assets/lg${modalPicture.name}`)" :alt="modalPicture.caption" contain :height="`${getWindowHeight/100*80}px`"></v-card-media>
-            <v-card-title>
-              <v-flex>
-                <h3>{{modalPicture.caption}}</h3>
-              </v-flex>
-            </v-card-title>
-          </v-card>
-        </v-dialog>
-        <!-- 横画像の場合 -->
-        <v-dialog v-else v-model="dialog" :width="`${(getWindowWidth/100)*70}px`">
-          <v-card v-if="modalPicture.name">
-            <v-card-media class="card-media" :src="require(`../../assets/lg${modalPicture.name}`)" :alt="modalPicture.caption" contain :height="`${((getWindowWidth/100)*70)*2.0/3.0}px`"></v-card-media>
-            <v-card-title>
-              <v-flex>
-                <h3>{{modalPicture.caption}}</h3>
-              </v-flex>
-            </v-card-title>
-          </v-card>
-        </v-dialog>
+        <div v-if="selectedPicture">
+          <v-dialog v-if="selectedPicture.verticle" :value="isOpenDialog" :width="`${(getWindowHeight/100)*80*2.0/3.0}px`" @input="closeDialog">
+            <v-card v-if="selectedPicture.name">
+              <v-card-media class="card-media" :src="require(`../../assets/lg${selectedPicture.name}`)" :alt="selectedPicture.caption" contain :height="`${getWindowHeight/100*80}px`"></v-card-media>
+              <v-card-title>
+                <v-flex>
+                  <h3>{{selectedPicture.caption}}</h3>
+                </v-flex>
+              </v-card-title>
+            </v-card>
+          </v-dialog>
+          <!-- 横画像の場合 -->
+          <v-dialog v-else :value="isOpenDialog" :width="`${(getWindowWidth/100)*70}px`" @input="closeDialog">
+            <v-card v-if="selectedPicture.name">
+              <v-card-media class="card-media" :src="require(`../../assets/lg${selectedPicture.name}`)" :alt="selectedPicture.caption" contain :height="`${((getWindowWidth/100)*70)*2.0/3.0}px`"></v-card-media>
+              <v-card-title>
+                <v-flex>
+                  <h3>{{selectedPicture.caption}}</h3>
+                </v-flex>
+              </v-card-title>
+            </v-card>
+          </v-dialog>
+        </div>
       </v-flex>
     </v-layout>
   </div>
@@ -58,15 +60,27 @@
 <script lang='ts'>
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 @Component({
   name: 'Picture',
-  computed: mapGetters(['getWindowHeight', 'getWindowWidth'])
+  computed: {
+    ...mapGetters(['getWindowHeight', 'getWindowWidth']),
+    ...mapGetters('picture', {
+      selectedPicture: 'getSelectedPicture',
+      isOpenDialog: 'getIsOpenDialog'
+    })
+  },
+  methods: {
+    ...mapActions('picture', [
+      'tapPicture',
+      'closeDialog'
+    ])
+  }
 })
 export default class Picture extends Vue {
-  dialog: boolean = false
-  modalPicture: any = {}
+  // dialog: boolean = false
+  // modalPicture: any = {}
   albums = [
     {
       name: '和歌山',
@@ -127,10 +141,10 @@ export default class Picture extends Vue {
     }
   ]
 
-  tapPicture (picture: any) {
-    this.modalPicture = picture
-    this.dialog = true
-  }
+  // tapPicture (picture: any) {
+  //   this.modalPicture = picture
+  //   this.dialog = true
+  // }
 }
 </script>
 
