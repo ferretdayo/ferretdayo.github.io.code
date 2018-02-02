@@ -12,21 +12,35 @@ localVue.use(Vuex)
 
 describe('Picture.vue', () => {
   let actions
+  let getters
   let store
 
   beforeEach(() => {
     actions = {
-      actionClick: jest.fn(),
-      actionInput: jest.fn()
+      tapPicture: jest.fn(),
+      closeDialog: jest.fn()
+    }
+    getters = {
+      getSelectedPicture: jest.fn(),
+      getIsOpenDialog: jest.fn()
     }
     store = new Vuex.Store({
-      state: {},
-      actions
+      modules: {
+        picture: {
+          namespaced: true,
+          state: {
+            selectedPicture: {},
+            isOpenDialog: false
+          },
+          actions,
+          getters
+        }
+      }
     })
   })
-  
+
   it('should render correct contents', () => {
-    const wrapper = mount(Picture)
+    const wrapper = mount(Picture, { store, localVue })
     expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
     // const Constructor = Vue.extend(Picture)
     // const vm = new Constructor().$mount()
