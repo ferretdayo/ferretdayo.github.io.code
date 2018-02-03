@@ -35,13 +35,10 @@ describe('Picture.vue', () => {
     expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
   })
 
-  // it('should have selected Picture', () => {
-  //   const wrapper = shallow(Picture, { store, localVue })
-  //   const dialog = wrapper.findAll('h3')
-  //   const picture = { name: '_eno1.jpg', caption: 'ミズゴロウと岩' }
-  //   store.dispatch('picture/tapPicture', picture)
-  //   store.commit('picture/changeSelectedPicture', picture)
-  //   console.log(dialog.wrappers)
-  //   expect(dialog.wrappers.map(value => value.element.textContent)).toEqual(expect.arrayContaining([store.getters['picture/getSelectedPicture'].caption]))
-  // })
+  it('should have selected Picture', () => {
+    const picture = { name: '_eno1.jpg', caption: 'ミズゴロウと岩' }
+    store.dispatch('picture/tapPicture', picture)
+    expect(store.getters['picture/getSelectedPicture']).toBe(picture)
+    expect(store.getters['picture/getIsOpenDialog']).toBe(true)
+  })
 })
