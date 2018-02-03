@@ -69,5 +69,4 @@ export default class Header extends Vue {
 </script>
 
 <style scoped>
-
 </style>
