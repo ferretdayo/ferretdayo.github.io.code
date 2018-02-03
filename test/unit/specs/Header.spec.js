@@ -2,7 +2,7 @@ import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import { shallow, createLocalVue } from 'vue-test-utils'
 
-import Picture from '@/components/Picture/Picture'
+import Header from '@/components/Header'
 import CommonAction from '@/vuex/Common/CommonAction'
 import CommonGetter from '@/vuex/Common/CommonGetter'
 import CommonMutation from '@/vuex/Common/CommonMutation'
@@ -15,7 +15,7 @@ const localVue = createLocalVue()
 localVue.use(Vuetify)
 localVue.use(Vuex)
 
-describe('Picture.vue', () => {
+describe('Header.vue', () => {
   let store
 
   beforeEach(() => {
@@ -31,19 +31,15 @@ describe('Picture.vue', () => {
   })
 
   it('should render correct contents', () => {
-    const wrapper = shallow(Picture, { store, localVue })
-    expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
-  })
+    const wrapper = shallow(Header, { store, localVue })
+    console.log(wrapper.vm.$data.items)
+    expect(wrapper.vm.$data.items)
+    .toEqual(expect.arrayContaining([{
+      title: 'ツルえもん',
+      icon: 'perm_identity',
+      path: '/me'
+    }]))
 
-  it('should have selected Picture', () => {
-    const picture = { name: '_eno1.jpg', caption: 'ミズゴロウと岩' }
-    store.dispatch('picture/tapPicture', picture)
-    expect(store.getters['picture/getSelectedPicture']).toBe(picture)
-    expect(store.getters['picture/getIsOpenDialog']).toBe(true)
-  })
-
-  it('should have false isOpenDialog', () => {
-    store.dispatch('picture/closeDialog')
-    expect(store.getters['picture/getIsOpenDialog']).toBe(false)
+    expect(wrapper.element.querySelector('.list__tile__title').textContent).toEqual('ミズゴロウのすみか')
   })
 })
