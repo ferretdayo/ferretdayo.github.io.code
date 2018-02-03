@@ -5,7 +5,8 @@ module.exports = {
   moduleFileExtensions: [
     'js',
     'json',
-    'vue'
+    'vue',
+    'ts'
   ],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|svg)$': '<rootDir>/test/unit/fileMock',
@@ -13,6 +14,7 @@ module.exports = {
   },
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.(ts|tsx)$': '<rootDir>/node_modules/ts-jest',
     '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
   },
   testPathIgnorePatterns: [
