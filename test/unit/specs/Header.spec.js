@@ -32,7 +32,7 @@ describe('Header.vue', () => {
 
   it('should render correct contents', () => {
     const wrapper = shallow(Header, { store, localVue })
-    console.log(wrapper.vm.$data.items)
+
     expect(wrapper.vm.$data.items)
     .toEqual(expect.arrayContaining([{
       title: 'ツルえもん',
