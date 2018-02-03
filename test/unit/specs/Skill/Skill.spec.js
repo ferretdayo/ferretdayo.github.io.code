@@ -24,7 +24,7 @@ describe('Skill.vue', () => {
   it('should have skills', () => {
     const Constructor = Vue.extend(Skill)
     const vm = new Constructor().$mount()
-    expect(Object.keys(vm.$data)).toEqual(["languages", "frameworks", "others"])
+    expect(Object.keys(vm.$data)).toEqual(['languages', 'frameworks', 'others'])
   })
 
   it('should have note', () => {

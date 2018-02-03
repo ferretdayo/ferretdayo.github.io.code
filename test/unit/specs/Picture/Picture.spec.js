@@ -1,72 +1,47 @@
-import Vue from 'vue'
 import Vuex from 'vuex'
 import Vuetify from 'vuetify'
-import { mount, shallow, createLocalVue } from 'vue-test-utils'
+import { shallow, createLocalVue } from 'vue-test-utils'
+
 import Picture from '@/components/Picture/Picture'
+import CommonAction from '@/vuex/Common/CommonAction'
+import CommonGetter from '@/vuex/Common/CommonGetter'
+import CommonMutation from '@/vuex/Common/CommonMutation'
+import CommonState from '@/vuex/Common/CommonState'
+
+import PictureModule from '@/vuex/Picture/PictureModule'
 
 const localVue = createLocalVue()
 
 localVue.use(Vuetify)
 localVue.use(Vuex)
 
-
 describe('Picture.vue', () => {
-  let actions
-  let getters
   let store
 
   beforeEach(() => {
-    actions = {
-      tapPicture: jest.fn(),
-      closeDialog: jest.fn()
-    }
-    getters = {
-      getSelectedPicture: jest.fn(),
-      getIsOpenDialog: jest.fn()
-    }
     store = new Vuex.Store({
+      state: CommonState,
+      actions: CommonAction,
+      getters: CommonGetter,
+      mutations: CommonMutation,
       modules: {
-        picture: {
-          namespaced: true,
-          state: {
-            selectedPicture: {},
-            isOpenDialog: false
-          },
-          actions,
-          getters
-        }
+        picture: PictureModule
       }
     })
   })
 
   it('should render correct contents', () => {
-    const wrapper = mount(Picture, { store, localVue })
+    const wrapper = shallow(Picture, { store, localVue })
     expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
-    // const Constructor = Vue.extend(Picture)
-    // const vm = new Constructor().$mount()
-    // console.log(vm.$data)
-    // expect(vm.$el.querySelector('h1').textContent).toEqual('Picture!')
-
-    // サブタイトルがちゃんとあるか
-    // expect(vm.$el.querySelectorAll('h2.section')[0].textContent).toEqual('language')
-    // expect(vm.$el.querySelectorAll('h2.section')[1].textContent).toEqual('framework')
-    // expect(vm.$el.querySelectorAll('h2.section')[2].textContent).toEqual('other')
-
-    // // サブタイトルの中にデータあるかどうか
-    // expect([...vm.$el.querySelectorAll('section#language .skill-content')].map(value => value.textContent)).toEqual(expect.arrayContaining(['JavaScript']))
-    // expect([...vm.$el.querySelectorAll('section#framework .skill-content')].map(value => value.textContent)).toEqual(expect.arrayContaining(['Vue.js']))
-    // expect([...vm.$el.querySelectorAll('section#other .skill-content')].map(value => value.textContent)).toEqual(expect.arrayContaining(['Docker']))
   })
 
-  // it('should have skills', () => {
-  //   const Constructor = Vue.extend(Skill)
-  //   const vm = new Constructor().$mount()
-  //   expect(Object.keys(vm.$data)).toEqual(["languages", "frameworks", "others"])
-  // })
-
-  // it('should have note', () => {
-  //   const Constructor = Vue.extend(Skill)
-  //   const vm = new Constructor().$mount()
-  //   expect(vm.$el.querySelector('h3.note').textContent).toEqual('備考')
+  // it('should have selected Picture', () => {
+  //   const wrapper = shallow(Picture, { store, localVue })
+  //   const dialog = wrapper.findAll('h3')
+  //   const picture = { name: '_eno1.jpg', caption: 'ミズゴロウと岩' }
+  //   store.dispatch('picture/tapPicture', picture)
+  //   store.commit('picture/changeSelectedPicture', picture)
+  //   console.log(dialog.wrappers)
+  //   expect(dialog.wrappers.map(value => value.element.textContent)).toEqual(expect.arrayContaining([store.getters['picture/getSelectedPicture'].caption]))
   // })
 })

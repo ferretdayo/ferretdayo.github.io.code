@@ -35,7 +35,7 @@
               <v-card-media class="card-media" :src="require(`../../assets/lg${selectedPicture.name}`)" :alt="selectedPicture.caption" contain :height="`${getWindowHeight/100*80}px`"></v-card-media>
               <v-card-title>
                 <v-flex>
-                  <h3>{{selectedPicture.caption}}</h3>
+                  <h3 class="card-caption">{{selectedPicture.caption}}</h3>
                 </v-flex>
               </v-card-title>
             </v-card>
@@ -46,7 +46,7 @@
               <v-card-media class="card-media" :src="require(`../../assets/lg${selectedPicture.name}`)" :alt="selectedPicture.caption" contain :height="`${((getWindowWidth/100)*70)*2.0/3.0}px`"></v-card-media>
               <v-card-title>
                 <v-flex>
-                  <h3>{{selectedPicture.caption}}</h3>
+                  <h3 class="card-caption">{{selectedPicture.caption}}</h3>
                 </v-flex>
               </v-card-title>
             </v-card>
