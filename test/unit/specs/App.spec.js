@@ -2,7 +2,7 @@ import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import { shallow, createLocalVue } from 'vue-test-utils'
 
-import Picture from '@/components/Picture/Picture'
+import App from '@/App'
 import CommonAction from '@/vuex/Common/CommonAction'
 import CommonGetter from '@/vuex/Common/CommonGetter'
 import CommonMutation from '@/vuex/Common/CommonMutation'
@@ -15,7 +15,7 @@ const localVue = createLocalVue()
 localVue.use(Vuetify)
 localVue.use(Vuex)
 
-describe('Picture.vue', () => {
+describe('App.vue', () => {
   let store
 
   beforeEach(() => {
@@ -31,19 +31,9 @@ describe('Picture.vue', () => {
   })
 
   it('should render correct contents', () => {
-    const wrapper = shallow(Picture, { store, localVue })
-    expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
-  })
-
-  it('should have selected Picture', () => {
-    const picture = { name: '_eno1.jpg', caption: 'ミズゴロウと岩' }
-    store.dispatch('picture/tapPicture', picture)
-    expect(store.getters['picture/getSelectedPicture']).toBe(picture)
-    expect(store.getters['picture/getIsOpenDialog']).toBe(true)
-  })
-
-  it('should have false isOpenDialog', () => {
-    store.dispatch('picture/closeDialog')
-    expect(store.getters['picture/getIsOpenDialog']).toBe(false)
+    // const wrapper = shallow(App, { store, localVue })
+    // const mizugorouImage = wrapper.find('img')
+    // console.log(mizugorouImage)
+    // expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
   })
 })
