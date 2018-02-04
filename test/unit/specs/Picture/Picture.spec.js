@@ -32,7 +32,7 @@ describe('Picture.vue', () => {
 
   it('should render correct contents', () => {
     const wrapper = shallow(Picture, { store, localVue })
-    expect(wrapper.element.querySelector('h1').textContent).toEqual('Picture!')
+    expect(wrapper.find('h1').text()).toEqual('Picture!')
   })
 
   it('should have selected Picture', () => {

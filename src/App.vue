@@ -6,7 +6,6 @@
         <v-container>
           <router-view/>
         </v-container>
-        <Footer></Footer>
       </v-content>
       <div @click="setTop">
         <div class="up-cursor">↑</div>
