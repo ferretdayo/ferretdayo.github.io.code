@@ -34,34 +34,6 @@ function sum(a, b) {
 }
 
 describe('test', () => {
-  let each = ''
-  let all = ''
-
-  /**
-   * beforeAll, afterAllは，describeの中で１回のみ
-   */ 
-  beforeAll(() => {
-    all = 'before'
-    console.log('beforeAll: ', all)
-  })
-  afterAll(() => {
-    all = 'after'
-    console.log('afterAll: ', all)
-  })
-
-  /**
-   * beforeEach, afterEachは，itを実行時に毎回行う
-   */ 
-  beforeEach(() => {
-    each = 'before'
-    console.log('beforeEach: ', each)
-  })
-
-  afterEach(() => {
-    each = 'after'
-    console.log('afterEach: ', each)
-  })
-
   // 基本のテスト
   it('sum', () => {
     expect(sum(1,2)).toBe(3)
