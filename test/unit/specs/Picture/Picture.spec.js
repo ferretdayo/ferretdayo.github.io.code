@@ -3,12 +3,8 @@ import Vuetify from 'vuetify'
 import { shallow, createLocalVue } from 'vue-test-utils'
 
 import Picture from '@/components/Picture/Picture'
-import CommonAction from '@/vuex/Common/CommonAction'
-import CommonGetter from '@/vuex/Common/CommonGetter'
-import CommonMutation from '@/vuex/Common/CommonMutation'
-import CommonState from '@/vuex/Common/CommonState'
 
-import PictureModule from '@/vuex/Picture/PictureModule'
+import Store from '@/vuex/store'
 
 const localVue = createLocalVue()
 
@@ -19,15 +15,7 @@ describe('Picture.vue', () => {
   let store
 
   beforeEach(() => {
-    store = new Vuex.Store({
-      state: CommonState,
-      actions: CommonAction,
-      getters: CommonGetter,
-      mutations: CommonMutation,
-      modules: {
-        picture: PictureModule
-      }
-    })
+    store = Store
   })
 
   it('should render correct contents', () => {

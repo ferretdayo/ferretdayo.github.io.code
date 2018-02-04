@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+
 import Skill from '@/components/Skill/Skill'
 
 Vue.use(Vuetify)
