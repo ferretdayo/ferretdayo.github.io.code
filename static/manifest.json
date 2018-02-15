@@ -6,10 +6,15 @@
       "src": "/static/img/icon.jpg",
       "sizes": "128x128",
       "type": "image/jpg"
+    },
+    {
+      "src": "/static/img/tsuruemon_circle.png",
+      "sizes": "321x321",
+      "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "https://ferretdayo.github.io",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "background_color": "#58D3F7",
+  "theme_color": "#58D3F7"
 }
