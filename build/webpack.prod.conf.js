@@ -113,7 +113,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     ]),
     // service worker caching
     new SWPrecacheWebpackPlugin({
-      cacheId: 'pwa',
+      cacheId: 'tsuruemon',
       filename: 'service-worker.js',
       staticFileGlobs: ['dist/**/*.{js,html,css,png,jpg,gif}'],
       minify: true,
