@@ -6,41 +6,6 @@
       "src": "/static/img/icon.jpg",
       "sizes": "128x128",
       "type": "image/jpg"
-    },
-    {
-      "src": "/static/img/mizu.gif",
-      "sizes": "44x49",
-      "type": "image/gif"
-    },
-    {
-      "src": "/static/img/tsuruemon.jpg",
-      "sizes": "400x400",
-      "type": "image/jpg"
-    },
-    {
-      "src": "/static/img/mizu_cursor.jpg",
-      "sizes": "17x19",
-      "type": "image/jpg"
-    },
-    {
-      "src": "/static/img/mizu_cursor_hover.jpg",
-      "sizes": "17x19",
-      "type": "image/jpg"
-    },
-    {
-      "src": "/static/img/badminton.png",
-      "sizes": "1235x724",
-      "type": "image/png"
-    },
-    {
-      "src": "/static/img/bowling.png",
-      "sizes": "1243x730",
-      "type": "image/png"
-    },
-    {
-      "src": "/static/img/darts.png",
-      "sizes": "1236x725",
-      "type": "image/png"
     }
   ],
   "start_url": "/index.html",
