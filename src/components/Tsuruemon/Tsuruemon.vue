@@ -7,7 +7,7 @@
           :size="'200px'"
           class="grey lighten-4"
         >
-          <img src="../../assets/tsuruemon.jpg" alt="avatar">
+          <img src="/static/img/tsuruemon.jpg" alt="avatar">
         </v-avatar>
         <h2 class="name">ツルえもん㌠</h2>
       </v-flex>

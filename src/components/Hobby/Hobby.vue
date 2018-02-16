@@ -9,7 +9,7 @@
       <article class="hobby-grid">
         <figure class="hobby-item-image">
           <figcaption>バドミントン</figcaption>
-          <img class="hobby-image" src="../../assets/badminton.png">
+          <img class="hobby-image" src="/static/img/badminton.png">
         </figure>
         <aside class="hobby-item-text">
           バドミントンは約11年間ほどやっていました．<br>
@@ -19,7 +19,7 @@
         </aside>
         <figure class="hobby-item-image">
           <figcaption>ボウリング</figcaption>
-          <img class="hobby-image" src="../../assets/bowling.png">
+          <img class="hobby-image" src="/static/img/bowling.png">
         </figure>
         <aside class="hobby-item-text">
           大学生の時に先輩とめっちゃ10ゲーム投げたりしてました．<br>
@@ -28,7 +28,7 @@
         </aside>
         <figure class="hobby-item-image">
           <figcaption>ダーツ</figcaption>
-          <img class="hobby-image" src="../../assets/darts.png">
+          <img class="hobby-image" src="/static/img/darts.png">
         </figure>
         <aside class="hobby-item-text">
           大学院1年くらいからはじめました〜<br>
