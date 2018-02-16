@@ -9,7 +9,7 @@
       </v-content>
       <div @click="setTop">
         <div class="up-cursor">↑</div>
-        <img class="up" src="./assets/mizu_cursor_hover.png">
+        <img class="up" src="/static/img/mizu_cursor_hover.png">
       </div>
     </v-app>
   </div>
@@ -55,7 +55,7 @@ export default class App extends Vue {
   color #2c3e50
 body
   margin 0px
-  cursor url('./assets/mizu_cursor.png'), auto
+  cursor url('/static/img/mizu_cursor.png'), auto
 .up
   display fixed
   position absolute

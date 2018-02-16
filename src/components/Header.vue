@@ -5,7 +5,7 @@
         <v-list class="pa-0">
           <v-list-tile avatar :to="''">
             <v-list-tile-avatar>
-              <img src="../assets/mizu.gif" />
+              <img src="/static/img/mizu.gif" />
             </v-list-tile-avatar>
             <v-list-tile-content>
               <v-list-tile-title>ミズゴロウのすみか</v-list-tile-title>
