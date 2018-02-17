@@ -1,11 +1,28 @@
 import axios from 'axios'
 
 export default {
-  getPeople (): Promise<any> {
-    return axios.get('https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear', {
+  getPrefectures (): Promise<any> {
+    return axios.get('https://opendata.resas-portal.go.jp/api/v1/prefectures', {
+      headers: {
+        'X-API-KEY': process.env.RESAS_API_KEY
+      }
+    })
+  },
+  getCities (prefCode: number): Promise<any> {
+    return axios.get('https://opendata.resas-portal.go.jp/api/v1/cities', {
       params: {
-        cityCode: 11362,
-        prefCode: 11
+        prefCode
+      },
+      headers: {
+        'X-API-KEY': process.env.RESAS_API_KEY
+      }
+    })
+  },
+  getTourismAttractions (prefCode: number, cityCode: string): Promise<any> {
+    return axios.get('https://opendata.resas-portal.go.jp/api/v1/tourism/attractions', {
+      params: {
+        prefCode,
+        cityCode
       },
       headers: {
         'X-API-KEY': process.env.RESAS_API_KEY

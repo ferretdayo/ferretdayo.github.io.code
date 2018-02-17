@@ -10,5 +10,9 @@ type PictureState = {
 }
 
 type ResasState = {
-    data: object
+    prefectures: Array,
+    cities: Array,
+    activePrefectureCode: number,
+    activeCityCode: string,
+    tourismAttractions: Array
 }

@@ -13,8 +13,8 @@
               <router-link to="/enjoy/resas">
                 <img class="enjoy-img" src="static/img/tsuruemon.jpg">
               </router-link>
-              <figcaption>RESAS API</figcaption>
-              <aside class="fig-aside">RESASで遊んだ</aside>
+              <figcaption>観光場所の検索</figcaption>
+              <aside class="fig-aside">RESAS APIで遊んだ</aside>
             </v-flex>
           </v-layout>
         </section>
@@ -28,15 +28,11 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component({
-  name: 'Enjoy',
-  created () {
-    console.log(process.env)
-  }
+  name: 'Enjoy'
 })
 export default class Enjoy extends Vue {
   constructor () {
     super()
-    console.log(process.env)
   }
 }
 </script>

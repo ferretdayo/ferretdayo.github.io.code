@@ -1,8 +1,20 @@
 import { GetterTree } from "vuex";
 
 const getters: GetterTree<ResasState, CommonState> = {
-  getData(state: ResasState): Object {
-    return state.data
+  getPrefectures(state: ResasState): Array<any> {
+    return state.prefectures
+  },
+  getActivePrefectureCode(state: ResasState): number {
+    return state.activePrefectureCode
+  },
+  getCities(state: ResasState): Array<any> {
+    return state.cities
+  },
+  getActiveCityCode(state: ResasState): string {
+    return state.activeCityCode
+  },
+  getTourismAttractions(state: ResasState): Array<any> {
+    return state.tourismAttractions
   }
 }
 

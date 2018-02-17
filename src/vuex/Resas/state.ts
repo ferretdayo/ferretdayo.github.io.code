@@ -1,5 +1,9 @@
 let state: ResasState = {
-  data: {}
+  prefectures: [],
+  cities: [],
+  activePrefectureCode: 0,
+  activeCityCode: '',
+  tourismAttractions: []
 }
 
 export default state
