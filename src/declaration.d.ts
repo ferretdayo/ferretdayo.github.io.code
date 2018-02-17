@@ -5,6 +5,10 @@ type CommonState = {
 }
 
 type PictureState = {
-    selectedPicture: Object,
+    selectedPicture: object,
     isOpenDialog: boolean
+}
+
+type ResasState = {
+    data: object
 }
