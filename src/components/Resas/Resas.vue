@@ -40,7 +40,7 @@
               </v-list-tile-avatar>
               <v-list-tile-content>
                 <v-list-tile-title>{{tourismAttraction.resourceName}}</v-list-tile-title>
-                <v-list-tile-sub-title>{{tourismAttraction.address}}</v-list-tile-sub-title>
+                <v-list-tile-sub-title v-if="tourismAttraction.address">{{tourismAttraction.address}}</v-list-tile-sub-title>
               </v-list-tile-content>
               <v-list-tile-action>
                 <v-btn icon ripple v-if="tourismAttraction.address" :href="`https://www.google.ru/maps/place/${tourismAttraction.address}`">

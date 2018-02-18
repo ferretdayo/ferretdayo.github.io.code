@@ -19,7 +19,7 @@ export default {
   async onSelectCity (context: ActionContext<ResasState, CommonState>, cityCode: string) {
     context.commit('changeActiveCityCode', cityCode)
     let attractions: Array<any> = []
-    let _attrations = await api.getTourismAttractions(context.getters['getActivePrefectureCode'], cityCode)
+    let _attractions = await api.getTourismAttractions(context.getters['getActivePrefectureCode'], cityCode)
     .then(res => {
       if (res.data.result === null) {
         return []
@@ -27,17 +27,17 @@ export default {
       return res.data.result.data
     })
 
-    for (let attraction of _attrations) {
-      await api.getAddressFromLocation(attraction.resourceName)
-      .then(res => {
-        if (res.data.results.length > 0) {
-          let address = res.data.results[0]
-          attraction.address = address.formatted_address.replace('日本、', '')
-        }
-        attractions.push(attraction)
-      })
-    }
-    context.commit('changeTourismAttractions', attractions)
+    // for (let attraction of _attrations) {
+    //   await api.getAddressFromLocation(attraction.resourceName)
+    //   .then(res => {
+    //     if (res.data.results.length > 0) {
+    //       let address = res.data.results[0]
+    //       attraction.address = address.formatted_address
+    //     }
+    //     attractions.push(attraction)
+    //   })
+    // }
+    context.commit('changeTourismAttractions', _attractions)
   },
   clear (context: ActionContext<ResasState, CommonState>) {
     context.commit('changePrefectures', [])
