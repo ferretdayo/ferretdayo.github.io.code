@@ -28,5 +28,22 @@ export default {
         'X-API-KEY': process.env.RESAS_API_KEY
       }
     })
+  },
+  getAddressFromLatLng (latitude: number, longitude: number): Promise<any> {
+    return axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+      params: {
+        latlng: latitude + ',' + longitude,
+        key: process.env.GOOGLE_MAP_API_KEY
+      }
+    })
+  },
+  getAddressFromLocation (locationName: string): Promise<any> {
+    return axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+      params: {
+        address: locationName,
+        region: 'jp',
+        key: process.env.GOOGLE_MAP_API_KEY
+      }
+    })
   }
 }

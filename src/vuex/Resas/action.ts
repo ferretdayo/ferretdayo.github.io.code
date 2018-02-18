@@ -16,12 +16,28 @@ export default {
       context.commit('changeCities', [{ cityCode: '-', cityName: '全ての市町村' }, ...res.data.result])
     })
   },
-  onSelectCity (context: ActionContext<ResasState, CommonState>, cityCode: string) {
+  async onSelectCity (context: ActionContext<ResasState, CommonState>, cityCode: string) {
     context.commit('changeActiveCityCode', cityCode)
-    api.getTourismAttractions(context.getters['getActivePrefectureCode'], cityCode)
+    let attractions: Array<any> = []
+    let _attrations = await api.getTourismAttractions(context.getters['getActivePrefectureCode'], cityCode)
     .then(res => {
-      context.commit('changeTourismAttractions', res.data.result.data)
+      if (res.data.result === null) {
+        return []
+      }
+      return res.data.result.data
     })
+
+    for (let attraction of _attrations) {
+      await api.getAddressFromLocation(attraction.resourceName)
+      .then(res => {
+        if (res.data.results.length > 0) {
+          let address = res.data.results[0]
+          attraction.address = address.formatted_address.replace('日本、', '')
+        }
+        attractions.push(attraction)
+      })
+    }
+    context.commit('changeTourismAttractions', attractions)
   },
   clear (context: ActionContext<ResasState, CommonState>) {
     context.commit('changePrefectures', [])
