@@ -16,6 +16,9 @@ const mutations: MutationTree<CommonState> = {
     } else {
       state.isMobile = false
     }
+  },
+  changeIsLoad (state: any, isload) {
+    state.isload = isload
   }
 }
 

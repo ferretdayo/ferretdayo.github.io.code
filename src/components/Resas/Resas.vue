@@ -6,7 +6,7 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap justify-space-around>
-      <v-flex xs5>
+      <v-flex md5 xs12>
         <v-select
           :items="prefectures"
           item-text="prefName"
@@ -18,7 +18,7 @@
           @change="onSelectPrefecture"
         ></v-select>
       </v-flex>
-      <v-flex xs5>
+      <v-flex md5 xs12>
         <v-select
           :items="cities"
           item-text="cityName"

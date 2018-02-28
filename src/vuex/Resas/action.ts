@@ -3,22 +3,28 @@ import api from './_api'
 
 export default {
   init (context: ActionContext<ResasState, CommonState>) {
+    console.log(context)
+    context.commit('changeIsLoad', true, { root: true })
     api.getPrefectures()
     .then(res => {
       context.commit('changePrefectures', res.data.result)
+      context.commit('changeIsLoad', false, { root: true })
     })
   },
   onSelectPrefecture (context: ActionContext<ResasState, CommonState>, prefCode: number) {
     context.commit('changeActivePrefectureCode', prefCode)
     context.commit('changeTourismAttractions', [])
+    context.commit('changeIsLoad', true, { root: true })
     api.getCities(prefCode)
     .then(res => {
       context.commit('changeCities', [{ cityCode: '-', cityName: '全ての市町村' }, ...res.data.result])
+      context.commit('changeIsLoad', false, { root: true })
     })
   },
   async onSelectCity (context: ActionContext<ResasState, CommonState>, cityCode: string) {
     context.commit('changeActiveCityCode', cityCode)
     let attractions: Array<any> = []
+    context.commit('changeIsLoad', true, { root: true })
     let _attractions = await api.getTourismAttractions(context.getters['getActivePrefectureCode'], cityCode)
     .then(res => {
       if (res.data.result === null) {
@@ -26,18 +32,8 @@ export default {
       }
       return res.data.result.data
     })
-
-    // for (let attraction of _attrations) {
-    //   await api.getAddressFromLocation(attraction.resourceName)
-    //   .then(res => {
-    //     if (res.data.results.length > 0) {
-    //       let address = res.data.results[0]
-    //       attraction.address = address.formatted_address
-    //     }
-    //     attractions.push(attraction)
-    //   })
-    // }
     context.commit('changeTourismAttractions', _attractions)
+    context.commit('changeIsLoad', false, { root: true })
   },
   clear (context: ActionContext<ResasState, CommonState>) {
     context.commit('changePrefectures', [])
