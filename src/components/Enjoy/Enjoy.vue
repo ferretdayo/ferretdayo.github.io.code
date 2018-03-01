@@ -11,10 +11,10 @@
           <v-layout row wrap>
             <v-flex>
               <router-link to="/enjoy/resas">
-                <img class="enjoy-img" src="static/img/tsuruemon.jpg">
+                <img class="enjoy-img" src="static/img/travel.svg">
               </router-link>
               <figcaption>観光場所の検索</figcaption>
-              <aside class="fig-aside">RESAS APIで遊んだ</aside>
+              <aside class="fig-aside">RESAS(地域経済分析システム)に掲載しているデータを国がAPIから利用できるようにしているので，その情報で遊んでみた</aside>
             </v-flex>
           </v-layout>
         </section>
