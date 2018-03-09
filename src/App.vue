@@ -65,8 +65,8 @@ body
   cursor url('/static/img/mizu_cursor.png'), auto
 
 .progress-linear
-  margin-top 0px
-  position fixed
+  margin-top 0px !important
+  position fixed !important
 
 .up
   display fixed
