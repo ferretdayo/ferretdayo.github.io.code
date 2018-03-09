@@ -1,9 +1,9 @@
 import Vuex, { ActionTree, GetterTree, MutationTree, Store } from 'vuex'
 import Vue from 'vue'
-import CommonAction from './Common/CommonAction'
-import CommonMutation from './Common/CommonMutation'
-import CommonGetter from './Common/CommonGetter'
-import CommonState from './Common/CommonState'
+import CommonAction from './Common/action'
+import CommonMutation from './Common/mutation'
+import CommonGetter from './Common/getter'
+import CommonState from './Common/state'
 import Modules from './modules'
 
 Vue.use(Vuex)

@@ -12,6 +12,9 @@ const getters: GetterTree<CommonState, any> = {
   },
   getIsMobile (state: any): boolean {
     return state.isMobile
+  },
+  getIsLoad (state: any): boolean {
+    return state.isload
   }
 }
 

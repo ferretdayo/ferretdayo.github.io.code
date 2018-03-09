@@ -3,12 +3,12 @@ import Vuetify from 'vuetify'
 import { shallow, createLocalVue } from 'vue-test-utils'
 
 import Header from '@/components/Header'
-import CommonAction from '@/vuex/Common/CommonAction'
-import CommonGetter from '@/vuex/Common/CommonGetter'
-import CommonMutation from '@/vuex/Common/CommonMutation'
-import CommonState from '@/vuex/Common/CommonState'
+import CommonAction from '@/vuex/Common/action'
+import CommonGetter from '@/vuex/Common/getter'
+import CommonMutation from '@/vuex/Common/mutation'
+import CommonState from '@/vuex/Common/state'
 
-import PictureModule from '@/vuex/Picture/PictureModule'
+import PictureModule from '@/vuex/Picture'
 
 const localVue = createLocalVue()
 

@@ -4,7 +4,8 @@
 const state: CommonState = {
   windowWidth: 0,
   windowHeight: 0,
-  isMobile: false
+  isMobile: false,
+  isload: false
 }
 
 export default state

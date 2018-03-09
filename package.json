@@ -22,6 +22,7 @@
     "@babel/preset-es2015": "^7.0.0-beta.40",
     "@types/jest": "^22.1.0",
     "autoprefixer": "^7.1.5",
+    "axios": "^0.17.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

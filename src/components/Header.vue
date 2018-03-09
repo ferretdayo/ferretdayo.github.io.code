@@ -63,6 +63,11 @@ export default class Header extends Vue {
       title: 'PICTURE',
       icon: 'photo_camera',
       path: '/picture'
+    },
+    {
+      title: 'ENJOY',
+      icon: 'directions_bike',
+      path: '/enjoy'
     }
   ]
 }

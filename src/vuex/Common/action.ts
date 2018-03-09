@@ -11,6 +11,12 @@ const actions: ActionTree<CommonState, any> = {
   resizeWindowHeight (context: any) {
     context.commit('windowHeight', document.documentElement.clientHeight)
     context.commit('isMobile')
+  },
+  loading (context: any) {
+    context.commit('changeIsload', true)
+  },
+  loaded (context: any) {
+    context.commit('changeIsload', false)
   }
 }
 

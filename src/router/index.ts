@@ -5,6 +5,8 @@ import Skill from '@/components/Skill/Skill.vue'
 import Product from '@/components/Product/Product.vue'
 import Hobby from '@/components/Hobby/Hobby.vue'
 import Picture from '@/components/Picture/Picture.vue'
+import Enjoy from '@/components/Enjoy/Enjoy.vue'
+import Resas from '@/components/Resas/Resas.vue'
 
 import '../../node_modules/vuetify/dist/vuetify.min.css'
 
@@ -41,6 +43,16 @@ export default new Router({
       path: '/picture',
       name: 'Picture',
       component: Picture
+    },
+    {
+      path: '/enjoy',
+      name: 'Enjoy',
+      component: Enjoy
+    },
+    {
+      path: '/enjoy/resas',
+      name: 'Resas',
+      component: Resas
     }
   ]
 })
