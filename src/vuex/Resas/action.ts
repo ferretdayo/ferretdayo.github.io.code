@@ -9,8 +9,7 @@ export default {
     .then(res => {
       context.commit('changePrefectures', res.data.result)
       context.commit('changeIsLoad', false, { root: true })
-    })
-    .catch(error => Raven.captureException(error))
+    }).catch(error => Raven.captureException(error))
   },
   onSelectPrefecture (context: ActionContext<ResasState, CommonState>, prefCode: number) {
     context.commit('changeActivePrefectureCode', prefCode)
@@ -20,8 +19,7 @@ export default {
     .then(res => {
       context.commit('changeCities', [{ cityCode: '-', cityName: '全ての市町村' }, ...res.data.result])
       context.commit('changeIsLoad', false, { root: true })
-    })
-    .catch(error => Raven.captureException(error))
+    }).catch(error => Raven.captureException(error))
   },
   async onSelectCity (context: ActionContext<ResasState, CommonState>, cityCode: string) {
     context.commit('changeActiveCityCode', cityCode)
@@ -33,8 +31,7 @@ export default {
         return []
       }
       return res.data.result.data
-    })
-    .catch(error => Raven.captureException(error))
+    }).catch(error => Raven.captureException(error))
 
     context.commit('changeTourismAttractions', _attractions)
     context.commit('changeIsLoad', false, { root: true })
