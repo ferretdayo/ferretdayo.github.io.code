@@ -20,7 +20,7 @@
             <v-list-tile-action>
               <v-icon>{{information.icon}}</v-icon>
             </v-list-tile-action>
-            <v-list-tile-content>
+            <v-list-tile-content class="content-text">
               <v-list-tile-title v-if="information.link"><a target="_blank" :href="information.link">{{ information.content }}</a></v-list-tile-title>
               <v-list-tile-title v-else>{{ information.content }}</v-list-tile-title>
             </v-list-tile-content>
@@ -34,7 +34,7 @@
             <v-list-tile-action>
               <v-icon>{{ career.icon }}</v-icon>
             </v-list-tile-action>
-            <v-list-tile-content>
+            <v-list-tile-content class="content-text">
               <v-list-tile-title>{{ career.content }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
@@ -89,4 +89,8 @@ export default class Tsuruemon extends Vue {
 @media screen and (min-width: 700px) and (max-width: 960px)
   .layout-content
     padding-left 200px
+// smartphone用
+@media screen and (max-width: 400px)
+  .content-text
+    font-size 14px
 </style>
