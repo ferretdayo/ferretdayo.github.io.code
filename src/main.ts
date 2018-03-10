@@ -14,6 +14,16 @@ Raven
   .addPlugin(RavenVue, Vue)
   .install()
 
+Raven.setUserContext({
+  id: 12,
+  username: 'ferretdayo',
+  email: 'ferretdayo@gmail.com'
+})
+
+Raven.setExtraContext({
+  name: 'ferretdayo'
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
