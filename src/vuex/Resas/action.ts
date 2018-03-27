@@ -7,10 +7,6 @@ export default {
     context.commit('changeIsLoad', true, { root: true })
     api.getPrefectures()
     .then(res => {
-      Raven.captureMessage('fetch prefectures from rasas api', {
-        tags: { category: 'rasas api' },
-        level: 'info'
-      })
       context.commit('changePrefectures', res.data.result)
       context.commit('changeIsLoad', false, { root: true })
     }).catch(error => Raven.captureException(error))
