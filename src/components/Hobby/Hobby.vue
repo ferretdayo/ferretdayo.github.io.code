@@ -117,9 +117,13 @@ figcaption {
     display: block;
   }
 
+  .hobby-item-image {
+    margin-bottom: 0px;
+  }
+
   .hobby-item-text {
     text-align: left;
-    padding: 10px;
+    padding: 5px 10px 20px;
   }
 
   .hobby-image {

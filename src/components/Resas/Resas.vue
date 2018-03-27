@@ -61,6 +61,7 @@
 
 <script lang='ts'>
 import Vue from 'vue'
+import Raven from 'raven-js'
 import { mapActions, mapGetters } from 'vuex'
 import Component from 'vue-class-component'
 
