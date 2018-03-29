@@ -15,7 +15,7 @@
       </v-toolbar>
       <v-list class="pt-0" dense>
         <v-divider></v-divider>
-        <v-list-tile v-for="item in items" :key="item.title" :to="item.path">
+        <v-list-tile v-for="item in items" :key="item.title" :to="item.path" @click="pageInit">
           <v-list-tile-action>
             <v-icon>{{item.icon}}</v-icon>
           </v-list-tile-action>
@@ -70,6 +70,10 @@ export default class Header extends Vue {
       path: '/enjoy'
     }
   ]
+
+  pageInit() {
+    window.scroll(0, 0)
+  }
 }
 </script>
 
