@@ -10,7 +10,7 @@ Vue.use(Vuetify)
 Vue.config.productionTip = false
 
 Raven
-  .config('https://5e7c78515ef040ad8103a2de65527744@sentry.io/301182')
+  .config('https://b98ded8dcfa94cc0bd45f091480f9376@sentry.io/768361')
   .addPlugin(RavenVue, Vue)
   .install()
 
