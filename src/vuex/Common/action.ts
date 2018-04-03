@@ -10,6 +10,8 @@ const actions: ActionTree<CommonState, any> = {
   },
   resizeWindowHeight (context: any) {
     context.commit('windowHeight', document.documentElement.clientHeight)
+    // console.log(window.scrollY)
+    // context.commit('changeCanScroll', window.scrollbars.visible)
     context.commit('isMobile')
   },
   loading (context: any) {
@@ -17,6 +19,9 @@ const actions: ActionTree<CommonState, any> = {
   },
   loaded (context: any) {
     context.commit('changeIsload', false)
+  },
+  onScroll (context: any) {
+    context.commit('changeCanScroll', !!window.scrollY)
   }
 }
 

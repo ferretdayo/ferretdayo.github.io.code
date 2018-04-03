@@ -19,6 +19,9 @@ const mutations: MutationTree<CommonState> = {
   },
   changeIsLoad (state: any, isload) {
     state.isload = isload
+  },
+  changeCanScroll (state: any, canScroll) {
+    state.canScroll = canScroll
   }
 }
 

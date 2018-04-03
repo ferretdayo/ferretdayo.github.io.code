@@ -8,7 +8,7 @@
           <router-view/>
         </v-container>
       </v-content>
-      <div @click="setTop">
+      <div class="top-button" @click="setTop" :hidden="!canScroll">
         <img class="up-cursor" alt="上矢印" src="/static/img/arrow.png">
         <img class="up" alt="色違いのミズゴロウ" src="/static/img/mizu_cursor_hover.png">
       </div>
@@ -26,7 +26,8 @@ import Header from '@/components/Header.vue'
   name: 'App',
   computed: {
     ...mapGetters({
-      isload: 'getIsLoad'
+      isload: 'getIsLoad',
+      canScroll: 'getCanScroll'
     })
   },
   components: {
@@ -37,6 +38,7 @@ export default class App extends Vue {
   constructor () {
     super()
     this.onResize()
+    window.addEventListener('scroll', this.setOnScroll)
   }
 
   // mapActionsで関数定義しても上手く動かないので，ひとまず直接dispatch
@@ -45,8 +47,16 @@ export default class App extends Vue {
     this.$store.dispatch('resizeWindowHeight')
   }
 
+  setOnScroll () {
+    this.$store.dispatch('onScroll')
+  }
+
   setTop () {
-    window.scroll(0, 0)
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth' 
+    })
   }
 }
 </script>
@@ -69,15 +79,13 @@ body
   position fixed !important
 
 .up
-  display fixed
-  position absolute
+  position fixed
   right 50px
   bottom 50px
   width 50px
   height 50px
 .up-cursor
-  display fixed
-  position absolute
+  position fixed
   right 100px
   bottom 60px
   width 30px
@@ -85,15 +93,13 @@ body
 
 @media screen and (max-width: 960px)
   .up
-    display fixed
-    position absolute
+    position fixed
     right 20px
     bottom 20px
     width 35px
     height 35px
   .up-cursor
-    display fixed
-    position absolute
+    position fixed
     right 55px
     bottom 28px
     width 20px

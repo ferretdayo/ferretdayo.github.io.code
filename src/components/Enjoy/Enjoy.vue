@@ -45,7 +45,7 @@ figcaption
   width 100%
   margin-top 50px
   display grid
-  grid-template-rows 1fr 1fr
+  grid-template-rows 1fr
   grid-template-columns 10% 1fr 10%
 .enjoy
   grid-row 1
