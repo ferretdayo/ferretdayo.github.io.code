@@ -3,6 +3,7 @@ type CommonState = {
     windowHeight: number
     isMobile: boolean
     isload: boolean
+    canScroll: boolean
 }
 
 type PictureState = {

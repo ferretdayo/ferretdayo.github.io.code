@@ -15,6 +15,9 @@ const getters: GetterTree<CommonState, any> = {
   },
   getIsLoad (state: any): boolean {
     return state.isload
+  },
+  getCanScroll (state: any): boolean {
+    return state.canScroll
   }
 }
 

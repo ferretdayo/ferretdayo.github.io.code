@@ -17,6 +17,9 @@ const actions: ActionTree<CommonState, any> = {
   },
   loaded (context: any) {
     context.commit('changeIsload', false)
+  },
+  onScroll (context: any) {
+    context.commit('changeCanScroll', !!window.scrollY)
   }
 }
 
