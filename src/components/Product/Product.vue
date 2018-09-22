@@ -29,7 +29,7 @@
     </v-layout>
     <v-layout row wrap>
       <v-flex>
-        <h1>Contribute</h1>
+        <h1>OSS Contribute</h1>
       </v-flex>
     </v-layout>
     <v-layout row wrap justify-center>
