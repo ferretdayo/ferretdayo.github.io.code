@@ -98,13 +98,13 @@ body
   .up
     position fixed
     right 20px
-    bottom 20px
+    bottom 45px
     width 35px
     height 35px
   .up-cursor
     position fixed
     right 55px
-    bottom 28px
+    bottom 53px
     width 20px
     height 20px
 </style>

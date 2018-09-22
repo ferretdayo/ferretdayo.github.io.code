@@ -1,5 +1,5 @@
 <template>
-  <v-footer id="footer">
+  <v-footer id="footer" fixed>
     <v-flex>
       &copy; {{ new Date().getFullYear() }} - <strong>ferretdayo</strong>
     </v-flex>
