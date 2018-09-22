@@ -5,8 +5,10 @@ import router from './router'
 import store from './vuex/store'
 import Raven from 'raven-js'
 import RavenVue from 'raven-js/plugins/vue'
+import HttpVue from './http'
 
 Vue.use(Vuetify)
+Vue.use(HttpVue, {store})
 Vue.config.productionTip = false
 
 Raven
