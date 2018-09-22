@@ -80,13 +80,13 @@ export default class Product extends Vue {
   contributeList: any = [
     {
       title: 'hyper-pokemon',
-      description: 'Electron製のHyperターミナルのポケモンテーマの背景画像',
+      description: 'Electron製のHyperターミナルのポケモンテーマにミズゴロウ背景を追加',
       githubLink: 'https://github.com/klauscfhq/hyper-pokemon',
       pullRequestLink: 'https://github.com/klauscfhq/hyper-pokemon/pull/28' 
     },
     {
       title: 'cordova-plugin-camera',
-      description: 'cordovaのカメラプラグイン',
+      description: 'cordovaのカメラプラグインのドキュメント修正',
       githubLink: 'https://github.com/apache/cordova-plugin-camera',
       pullRequestLink: 'https://github.com/apache/cordova-plugin-camera/pull/264'
     }
