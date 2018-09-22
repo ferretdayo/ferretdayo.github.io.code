@@ -7,6 +7,7 @@
         <v-container>
           <router-view/>
         </v-container>
+        <Footer></Footer>
       </v-content>
       <div class="top-button" @click="setTop" :hidden="!canScroll">
         <img class="up-cursor" alt="上矢印" src="/static/img/arrow.png">
@@ -21,6 +22,7 @@ import Vue from 'vue'
 import { mapGetters } from 'vuex'
 import Component from 'vue-class-component'
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 @Component({
   name: 'App',
@@ -31,7 +33,8 @@ import Header from '@/components/Header.vue'
     })
   },
   components: {
-    Header
+    Header,
+    Footer
   }
 })
 export default class App extends Vue {
