@@ -11,6 +11,11 @@
       "src": "/static/img/tsuruemon_circle.png",
       "sizes": "321x321",
       "type": "image/png"
+    },
+    {
+      "src": "/static/img/tsuruemon_circle_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": "https://ferretdayo.github.io",
