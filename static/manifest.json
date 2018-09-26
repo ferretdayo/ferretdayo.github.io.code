@@ -1,11 +1,10 @@
 {
   "name": "ツルえもんの住処",
-  "short_name": "ツルえもんの住処",
   "icons": [
     {
-      "src": "/static/img/icon.jpg",
+      "src": "/static/img/icon.png",
       "sizes": "128x128",
-      "type": "image/jpg"
+      "type": "image/png"
     },
     {
       "src": "/static/img/tsuruemon_circle.png",
