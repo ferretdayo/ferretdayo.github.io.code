@@ -89,6 +89,12 @@ export default class Product extends Vue {
       description: 'cordovaのカメラプラグインのドキュメント修正',
       githubLink: 'https://github.com/apache/cordova-plugin-camera',
       pullRequestLink: 'https://github.com/apache/cordova-plugin-camera/pull/264'
+    },
+    {
+      title: 'react-native-picker-select',
+      description: 'Viewで括っていないことによるwarningの対処',
+      githubLink: 'https://github.com/lawnstarter/react-native-picker-select',
+      pullRequestLink: 'https://github.com/lawnstarter/react-native-picker-select/pull/103'
     }
   ]
 }
