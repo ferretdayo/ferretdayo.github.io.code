@@ -86,6 +86,7 @@ export default class Resas extends Vue {
   constructor () {
     super()
     this.$store.dispatch('resas/init')
+    console.log("AAA");
   }
   beforeDestroy () {
     this.$store.dispatch('resas/clear')
