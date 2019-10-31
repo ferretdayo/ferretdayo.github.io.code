@@ -4,9 +4,12 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Run eslint with reviewdog
       uses: reviewdog/action-eslint@v1.0.0
+      with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review # Change reporter.
+          eslint_flags: 'src/**/*.{js,vue}'
