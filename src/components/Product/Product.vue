@@ -95,8 +95,8 @@ export default class Product extends Vue {
       description: 'Viewで括っていないことによるwarningの対処',
       githubLink: 'https://github.com/lawnstarter/react-native-picker-select',
       pullRequestLink: 'https://github.com/lawnstarter/react-native-picker-select/pull/103'
-    }
-  ]
+    },
+  ];
 }
 </script>
 
