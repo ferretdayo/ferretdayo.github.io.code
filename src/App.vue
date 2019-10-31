@@ -48,6 +48,8 @@ export default class App extends Vue {
   onResize () {
     this.$store.dispatch('resizeWindowWidth')
     this.$store.dispatch('resizeWindowHeight')
+    debugger
+    console.log('AAA')
   }
 
   setOnScroll () {
@@ -58,7 +60,7 @@ export default class App extends Vue {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth' 
+      behavior: 'smooth'
     })
   }
 }

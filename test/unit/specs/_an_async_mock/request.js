@@ -1,6 +1,6 @@
 const http = require('http')
 
-export default function request(url) {
+export default function request (url) {
   return new Promise(resolve => {
     // This is an example of an http request, for example to fetch
     // user data from an API.

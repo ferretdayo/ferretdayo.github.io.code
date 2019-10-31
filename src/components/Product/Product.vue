@@ -82,7 +82,7 @@ export default class Product extends Vue {
       title: 'hyper-pokemon',
       description: 'Electron製のHyperターミナルのポケモンテーマにミズゴロウ背景を追加',
       githubLink: 'https://github.com/klauscfhq/hyper-pokemon',
-      pullRequestLink: 'https://github.com/klauscfhq/hyper-pokemon/pull/28' 
+      pullRequestLink: 'https://github.com/klauscfhq/hyper-pokemon/pull/28'
     },
     {
       title: 'cordova-plugin-camera',

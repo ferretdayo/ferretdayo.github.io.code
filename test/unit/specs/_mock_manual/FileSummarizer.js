@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
-const fs = require('fs');
+const fs = require('fs')
 
-function summarizeFilesInDirectorySync(directory) {
+function summarizeFilesInDirectorySync (directory) {
   return fs.readdirSync(directory).map(fileName => ({
     directory,
-    fileName,
-  }));
+    fileName
+  }))
 }
 
-exports.summarizeFilesInDirectorySync = summarizeFilesInDirectorySync;
+exports.summarizeFilesInDirectorySync = summarizeFilesInDirectorySync

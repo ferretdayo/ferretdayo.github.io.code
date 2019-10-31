@@ -1,6 +1,6 @@
 'use strict'
 
-function timerGame(callback) {
+function timerGame (callback) {
   console.log('Ready....go!')
   setTimeout(() => {
     console.log('Times up -- stop!')
