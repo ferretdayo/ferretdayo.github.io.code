@@ -1,6 +1,5 @@
-jest.mock('../request')
-
 import * as user from '../user'
+jest.mock('../request')
 
 // The assertion for a promise must be returned.
 it('works with promises', () => {
@@ -25,8 +24,8 @@ test('tests error with promises', async () => {
   expect.assertions(1)
   return user.getUserName(2).catch(e =>
     expect(e).toEqual({
-      error: 'User with 2 not found.',
-    }),
+      error: 'User with 2 not found.'
+    })
   )
 })
 
@@ -36,7 +35,7 @@ it('tests error with async/await', async () => {
     await user.getUserName(1)
   } catch (e) {
     expect(e).toEqual({
-      error: 'User with 1 not found.',
+      error: 'User with 1 not found.'
     })
   }
 })
@@ -44,7 +43,7 @@ it('tests error with async/await', async () => {
 it('tests error with rejects', () => {
   expect.assertions(1)
   return expect(user.getUserName(3)).rejects.toEqual({
-    error: 'User with 3 not found.',
+    error: 'User with 3 not found.'
   })
 })
 
@@ -52,6 +51,6 @@ it('tests error with rejects', () => {
 it('tests error with async/await and rejects', async () => {
   expect.assertions(1)
   await expect(user.getUserName(3)).rejects.toEqual({
-    error: 'User with 3 not found.',
+    error: 'User with 3 not found.'
   })
 })

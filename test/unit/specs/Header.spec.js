@@ -34,11 +34,11 @@ describe('Header.vue', () => {
     const wrapper = shallow(Header, { store, localVue })
 
     expect(wrapper.vm.$data.items)
-    .toEqual(expect.arrayContaining([{
-      title: 'ツルえもん',
-      icon: 'perm_identity',
-      path: '/me'
-    }]))
+      .toEqual(expect.arrayContaining([{
+        title: 'ツルえもん',
+        icon: 'perm_identity',
+        path: '/me'
+      }]))
 
     expect(wrapper.element.querySelector('.list__tile__title').textContent).toEqual('ミズゴロウのすみか')
   })

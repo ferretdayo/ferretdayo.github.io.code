@@ -66,7 +66,7 @@ export default class Header extends Vue {
     }
   ]
 
-  pageInit() {
+  pageInit () {
     window.scroll(0, 0)
   }
 }

@@ -112,13 +112,13 @@ describe('test', () => {
 
   it('mock implementation', () => {
     const myMockFn = jest
-    .fn()
-    .mockImplementation(scalar => 42 + scalar)
+      .fn()
+      .mockImplementation(scalar => 42 + scalar)
 
     expect(myMockFn(10)).toEqual(52)
   })
 
-  it('diff を取れるやつ', () => { 
+  it('diff を取れるやつ', () => {
     const diff = require('jest-diff')
     const a = {a: {b: {c: 5}}}
     const b = {a: {b: {c: 6}}}
