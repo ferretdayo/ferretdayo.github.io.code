@@ -11,4 +11,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: .head_commit.message .*#pr.* .repository.default_branch develop
+          args: .head_commit.message .*#pr.* .repository.default_branch .*#branch.*
