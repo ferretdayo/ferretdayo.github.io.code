@@ -97,7 +97,7 @@
     "vue-test-utils": "^1.0.0-beta.11",
     "vuetify": "^0.17.6",
     "vuex": "^3.0.1",
-    "webpack": "^3.7.1",
+    "webpack": "^3.12.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^3.7.2",
